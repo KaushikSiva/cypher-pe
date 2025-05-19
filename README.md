@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Volume Chart Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based dashboard to visualize transaction volume data (daily, weekly, monthly) for the Master Wallet. The app fetches volume data from a remote API and displays it using interactive bar charts and tables. Another page where you can type in wallet id and get Counterparty, Tx, Count, Type and Label data
 
-## Available Scripts
+Users can toggle between different volume modes and view filtered, meaningful data.
 
-In the project directory, you can run:
+deployed link : https://cypher-pe.onrender.com/index.html#/wallet
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Fetches volume data from a REST API.
+- Displays daily, weekly, and monthly volume data in an interactive bar chart.
+- Displays volume data in a tabular format below the chart.
+- Has a page where you can type in wallet id and get Counterparty	Tx, Count, Type and Label data
+- Switch between volume and wallet modes with easy-to-use buttons.
+- Responsive design with clear, simple styling.
+- Navigation header with links to related pages (e.g., Wallet and Volume).
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React (with TypeScript)
+- Chart.js & react-chartjs-2 for charts
+- Fetch API for data retrieval
+- React Router for navigation (optional, if routing is used)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js (>=14.x)
+- npm
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   git clone https://github.com/KaushikSiva/cypher-pe.git
+   cd volume-chart-dashboard
+   cd volume-chart-dashboard
