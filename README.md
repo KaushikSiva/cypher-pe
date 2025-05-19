@@ -7,6 +7,7 @@ A React-based dashboard to visualize transaction volume data (daily, weekly, mon
 ## Features
 
 - Fetches volume data from a REST API.
+- Has a page where you can type in wallet id and get Counterparty	Tx, Count, Type and Label data
 - Displays daily, weekly, and monthly volume data in an interactive bar chart.
 - Filter out zero values for cleaner visualization.
 - Switch between volume modes with easy-to-use buttons.
