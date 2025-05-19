@@ -38,5 +38,5 @@ A React-based dashboard to visualize transaction volume data (daily, weekly, mon
 
    ```bash
    git clone https://github.com/KaushikSiva/cypher-pe.git
-cd volume-chart-dashboard
+   cd volume-chart-dashboard
    cd volume-chart-dashboard
