@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../components/Header";
 
 const WalletUI: React.FC = () => {
   const [wallet, setWallet] = useState("");

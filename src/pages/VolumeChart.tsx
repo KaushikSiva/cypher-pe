@@ -1,6 +1,7 @@
 // src/pages/VolumeChart.tsx
 
 import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
