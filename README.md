@@ -4,7 +4,7 @@ A React-based dashboard to visualize transaction volume data (daily, weekly, mon
 
 Users can toggle between different volume modes and view filtered, meaningful data.
 
-deployed link : https://cypher-pe.onrender.com/index.html#/wallet
+deployed link : https://cypher-pe.onrender.com/index.html#/volume (render has a cold start of 15 mins after period of inactivity)
 
 ---
 
