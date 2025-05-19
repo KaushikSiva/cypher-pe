@@ -1,7 +1,7 @@
 // src/pages/VolumeChart.tsx
 
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
+import { Link } from "react-router-dom"; // for header links
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -21,6 +21,34 @@ type VolumeData = {
   weekly: number;
   monthly: number;
 };
+
+// Minimal header with nav links
+const Header: React.FC = () => (
+  <header
+    style={{
+      padding: "10px 20px",
+      backgroundColor: "#f0f0f0",
+      marginBottom: 20,
+      display: "flex",
+      justifyContent: "center",
+      gap: 20,
+      fontFamily: "Arial, sans-serif",
+    }}
+  >
+    <Link
+      to="/wallet"
+      style={{ textDecoration: "none", color: "#333", fontWeight: "bold" }}
+    >
+      Wallet
+    </Link>
+    <Link
+      to="/volume"
+      style={{ textDecoration: "none", color: "#333", fontWeight: "bold" }}
+    >
+      Volume
+    </Link>
+  </header>
+);
 
 const VolumeChart: React.FC = () => {
   const [data, setData] = useState<VolumeData[]>([]);
@@ -44,10 +72,8 @@ const VolumeChart: React.FC = () => {
       });
   }, []);
 
-  // Filter rows where the selected mode's value is NOT zero
   const filteredData = data.filter((row) => row[mode] !== 0);
 
-  // Prepare chart data for the selected mode
   const chartData = {
     labels: filteredData.map((d) => d.date),
     datasets: [
@@ -86,6 +112,8 @@ const VolumeChart: React.FC = () => {
         fontFamily: "Arial, sans-serif",
       }}
     >
+      <Header />
+
       <h2
         style={{
           fontSize: 24,

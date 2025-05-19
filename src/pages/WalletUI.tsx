@@ -33,6 +33,7 @@ const WalletUI: React.FC = () => {
 
   return (
     <div style={{ fontFamily: "Arial", padding: 20 }}>
+      <Header /> {/* <-- Put it here inside return JSX */}
       <h2>Wallet Analyzer (Base Mainnet)</h2>
       <input
         type="text"
