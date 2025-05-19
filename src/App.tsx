@@ -1,23 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
 import VolumeChart from "./pages/VolumeChart";
 import WalletUI from "./pages/WalletUI";
 
 const App: React.FC = () => {
-  const path = window.location.pathname;
-
-  let Content;
-  if (path === "/volume") {
-    Content = <VolumeChart />;
-  } else if (path === "/wallet") {
-    Content = <WalletUI />;
-  } else {
-    // Redirect to /volume
-    window.history.replaceState(null, "", "/volume");
-    Content = <VolumeChart />;
-  }
-
-  return <div>{Content}</div>;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/volume" element={<VolumeChart />} />
+        <Route path="/wallet" element={<WalletUI />} />
+        <Route path="*" element={<Navigate to="/volume" replace />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
