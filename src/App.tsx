@@ -10,7 +10,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/volume" element={<VolumeChart />} />
         <Route path="/wallet" element={<WalletUI />} />
-        <Route path="*" element={<Navigate to="/volume" replace />} />
+        <Route path="*" element={<Navigate to="/wallet" replace />} />
       </Routes>
     </Router>
   );
