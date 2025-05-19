@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import VolumeChart from "./pages/VolumeChart";
+import WalletUI from "./pages/WalletUI";
+
+const App: React.FC = () => {
+  const path = window.location.pathname;
+
+  let Content;
+  if (path === "/volume") {
+    Content = <VolumeChart />;
+  } else if (path === "/wallet") {
+    Content = <WalletUI />;
+  } else {
+    // Redirect to /volume
+    window.history.replaceState(null, "", "/volume");
+    Content = <VolumeChart />;
+  }
+
+  return <div>{Content}</div>;
+};
 
 export default App;
